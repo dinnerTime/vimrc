@@ -22,6 +22,12 @@ let mapleader=","
 " Remap ruby compiler to comma R.
 map <leader>r :!ruby %<cr>
 
+" Remap go run compiler to comma G.
+map <leader>g :!go run %<cr>
+
+" Use leader + w for shortcut to pane navigation.
+map <leader>w <C-w>
+
 " Automatically close VIM if NERDTree is the only window remaining.
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
@@ -44,11 +50,23 @@ filetype plugin indent on
 " Resolving the buffer nonsense of clipboards.
 set clipboard=unnamed
 
-" Set tab witdh to 2 spaces as opposed to 8 (the default).
-set tabstop=2
+" Show line numbers
+set number
+
+" Fix tabs to be the way I like them and the way they should be always and
+" forever.
+set tabstop=4       " The width of a TAB is set to 4.
+                    " Still it is a \t. It is just that
+                    " Vim will interpret it to be having
+                    " a width of 4.
+set shiftwidth=4    " Indents will have a width of 4
+set softtabstop=4   " Sets the number of columns for a TAB
+set expandtab       " Expand TABs to spaces
 
 " Don't create a swap file (disabling as of 2016.12.10 as Neovim seems to not
 " clean up swap files. :/)
+set nobackup
+set nowritebackup
 set noswapfile
 
 " JJ == GG! lololol
