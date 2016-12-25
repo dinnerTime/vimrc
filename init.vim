@@ -19,11 +19,11 @@ map <C-n> :NERDTreeToggle<CR>
 " Use comma as leader key.
 let mapleader=","
 
-" Remap ruby compiler to comma R.
-map <leader>r :!ruby %<cr>
+" Remap ruby compiler for .rb files.
+au FileType rb map <leader>r :!ruby %<cr>
 
-" Remap go run compiler to comma G.
-map <leader>g :!go run %<cr>
+" Remap go run compiler for .go files.
+au FileType go map <leader>r :!go run %<cr>
 
 " Use leader + w for shortcut to pane navigation.
 map <leader>w <C-w>
