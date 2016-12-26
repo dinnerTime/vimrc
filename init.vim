@@ -25,6 +25,11 @@ au FileType rb map <leader>r :!ruby %<cr>
 " Remap go run compiler for .go files.
 au FileType go map <leader>r :!go run %<cr>
 
+" Syntax highlighting for gohtml files.
+syntax on
+filetype on
+au BufNewFile,BufRead *.gohtml set filetype=html
+
 " Use leader + w for shortcut to pane navigation.
 map <leader>w <C-w>
 
