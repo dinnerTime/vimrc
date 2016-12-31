@@ -33,6 +33,9 @@ au BufNewFile,BufRead *.gohtml set filetype=html
 " Use leader + w for shortcut to pane navigation.
 map <leader>w <C-w>
 
+" Use leader + j to check json formatting.
+map <leader>j :%!python -m json.tool<cr>
+
 " Automatically close VIM if NERDTree is the only window remaining.
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
