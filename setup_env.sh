@@ -17,6 +17,9 @@ fi
 
 wget -P autoload https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim 
 
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 # Install critical color scheme (vim does not work without this, I swear).
 
 molokai='colors/molokai.vim'
@@ -26,4 +29,7 @@ then
     rm $molokai
 fi
 
+# Install vim-plug magic.
+
 wget -P colors https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim
+nvim +PlugInstall

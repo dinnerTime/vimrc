@@ -110,3 +110,9 @@ let g:molokai_original=1
 let g:rehash256 = 1
 colorscheme molokai
 
+" ================================================ Begin vim-plug
+call plug#begin('~/.local/share/nvim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries'}
+call plug#end()
+" ================================================ End vim-plug
