@@ -104,6 +104,9 @@ if !exists(":DiffOrig")
                  \ | wincmd p | diffthis
 endif
 
-" In case I feel old school.
-" colorscheme desert
+" Vim does not work at all without this, if you think about it.
+set t_Co=256
+let g:molokai_original=1
+let g:rehash256 = 1
+colorscheme molokai
 
