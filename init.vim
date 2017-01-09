@@ -25,6 +25,9 @@ au FileType rb map <leader>r :!ruby %<cr>
 " Remap go run compiler for .go files.
 au FileType go map <leader>r :!go run %<cr>
 
+" Remap go run compiler for .go files.
+au FileType js map <leader>r :!node run %<cr>
+
 " Syntax highlighting for gohtml files.
 syntax on
 filetype on
