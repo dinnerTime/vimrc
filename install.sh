@@ -12,6 +12,7 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 # update zshrc with custom aliases
+`echo 'ssh-add ~/.ssh/id_rsa_github' >> ~/.zshrc`
 `echo 'export PROJ="$HOME/proj"' >> ~/.zshrc`
 `echo 'alias vim="nvim"' >> ~/.zshrc`
 `echo 'alias vi="nvim"' >> ~/.zshrc`
